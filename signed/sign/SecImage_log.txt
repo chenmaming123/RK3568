@@ -1,0 +1,62 @@
+Logging to /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/signed/sign/SecImage_log.txt
+
+
+    SecImage launched as: "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools.py secimage -i /v2p/MA2000/LA.UM.5.6/LINUX/android/out/target/product/msm8953_64/emmc_appsboot.mbn -o /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/signed/sign -g appsbl -c /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/config/integration/secimage.xml -sa"
+
+Config path is set to: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/config/integration/secimage.xml
+WARNING: OEM ID is set to 0 for sign_id "appsbl"
+Output dir is set to: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/signed/sign
+Openssl v1.0.1 or greater is available at: "/usr/bin/openssl"
+------------------------------------------------------
+Processing 1/1: /v2p/MA2000/LA.UM.5.6/LINUX/android/out/target/product/msm8953_64/emmc_appsboot.mbn
+
+l1_file_name = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Encryption/Unified/default/l1_key.bin
+l2_file_name = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Encryption/Unified/default/l2_key.bin
+l3_file_name = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Encryption/Unified/default/l3_key.bin
+Clear L1 key, clear L2 key, and clear L3 keys were provided locally.
+Performing OEM sign on image: /v2p/MA2000/LA.UM.5.6/LINUX/android/out/target/product/msm8953_64/emmc_appsboot.mbn
+attestation_certificate_extensions = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/General_Assets/Signing/openssl/v3_attest.ext
+ca_certificate_extensions = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/General_Assets/Signing/openssl/v3.ext
+openssl_configfile = /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/General_Assets/Signing/openssl/opensslroot.cfg
+Using QC HMAC for hash segment
+Using PKCS RSA padding
+Using a predefined Root certificate and a predefined key
+Key Used: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Signing/Local/qc_presigned_certs-key2048_exp65537/qpsa_rootca.key
+Certificate Used: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Signing/Local/qc_presigned_certs-key2048_exp65537/qpsa_rootca.cer
+Using a predefined Attestation CA certificate and a predefined key
+Key Used: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Signing/Local/qc_presigned_certs-key2048_exp65537/qpsa_attestca.key
+Certificate Used: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/resources/data_prov_assets/Signing/Local/qc_presigned_certs-key2048_exp65537/qpsa_attestca.cer
+Generating new Attestation certificate and a random key
+ERROR: Traceback (most recent call last):
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/__init__.py", line 446, in process
+    parsegen = self._process_secure_operation(image, progress, security_policy_list, integrity_check, sign, encrypt, decrypt)
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/__init__.py", line 573, in _process_secure_operation
+    image, parsegen)
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/__init__.py", line 870, in _status_updater
+    retval = method(*args, **kwargs)
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/__init__.py", line 774, in _sign_image
+    sign_assets = signer.sign(parsegen.data_to_sign, image, image.dest_image.debug_dir_signer, parsegen.is_data_hash)
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/signer/base_signer.py", line 96, in sign
+    logger.info('\nAttestation Certificate Properties:\n' + str(attestation_cert_obj))
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/signer/signerutils/certificate.py", line 268, in __repr__
+    return properties_repr(self._repr_properties())
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/signer/signerutils/certificate.py", line 247, in _repr_properties
+    (self.SIGNATTR_SHA_ALGO, self.sha_algo),
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/signer/signerutils/certificate.py", line 384, in sha_algo
+    return self._get_sha_algo()
+  File "/v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/sectools/features/isc/signer/signerutils/certificate.py", line 157, in _get_sha_algo
+    raise RuntimeError("SHA algorithm OU field is missing from certificate.")
+RuntimeError: SHA algorithm OU field is missing from certificate.
+
+ERROR: SHA algorithm OU field is missing from certificate.
+------------------------------------------------------
+
+SUMMARY:
+Following actions were performed: "sign, validate"
+Output is saved at: /v2p/MA2000/LA.UM.5.6/LINUX/android/vendor/qcom/proprietary/common/scripts/SecImage/signed/sign
+
+| Idx | SignId | Parse | Integrity | Sign | Encrypt |              Validate              |
+|     |        |       |           |      |         | Parse | Integrity | Sign | Encrypt |
+|-----|--------|-------|-----------|------|---------|-------|-----------|------|---------|
+|  1. | appsbl |   T   |     NA    |  F   |    NA   |   NA  |     NA    |  NA  |    NA   |
+
